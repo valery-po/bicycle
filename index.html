@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+
+</head>
+
+<body>
+  <!--svg-sprites-->
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+
+    <symbol id="twitter" viewBox="0 0 68 68" width="68" height="68">
+      <defs>
+        <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+          <path d="M0 0L68 0L68 68L0 68Z" />
+        </clipPath>
+      </defs>
+      <style>
+        tspan {
+          white-space: pre
+        }
+
+        .shape {
+          fill: #67d7f4
+        }
+
+        .shp1 {
+          fill: #ffffff
+        }
+
+      </style>
+      <g id="Page 1" clip-path="url(#cp1)">
+        <path id="Path 1" class="shape" d="M34.02 68C52.8 68 68.03 52.77 68.03 33.98C68.03 15.2 52.8 -0.03 34.02 -0.03C15.23 -0.03 0 15.2 0 33.98C0 52.77 15.23 68 34.02 68Z" />
+        <path id="Path 2" class="shp1" d="M51.08 25.07C49.83 25.63 48.48 26.01 47.07 26.17C48.51 25.31 49.62 23.94 50.14 22.31C48.79 23.11 47.29 23.69 45.7 24C44.43 22.64 42.61 21.8 40.6 21.8C36.74 21.8 33.61 24.93 33.61 28.79C33.61 29.33 33.67 29.87 33.79 30.38C27.98 30.09 22.83 27.31 19.38 23.07C18.78 24.11 18.43 25.31 18.43 26.59C18.43 29.01 19.67 31.15 21.54 32.41C20.4 32.37 19.32 32.06 18.38 31.54L18.38 31.62C18.38 35.01 20.79 37.84 23.99 38.48C23.4 38.64 22.78 38.72 22.14 38.72C21.69 38.72 21.25 38.68 20.83 38.6C21.72 41.37 24.3 43.4 27.36 43.45C24.96 45.33 21.95 46.44 18.68 46.44C18.11 46.44 17.55 46.41 17.01 46.35C20.1 48.33 23.78 49.49 27.72 49.49C40.58 49.49 47.61 38.84 47.61 29.6C47.61 29.29 47.61 28.99 47.59 28.69C48.96 27.71 50.15 26.48 51.08 25.07Z" />
+      </g>
+    </symbol>
+
+    <symbol id="facebook" viewBox="0 0 68 68" width="68" height="68">
+      <defs>
+        <clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+          <path d="M0 0L68 0L68 68L0 68Z" />
+        </clipPath>
+      </defs>
+      <style>
+        tspan {
+          white-space: pre
+        }
+
+        .shipe {
+          fill: #4080c5
+        }
+
+        .shp1 {
+          fill: #ffffff
+        }
+
+      </style>
+      <g id="Page 1" clip-path="url(#cp1)">
+        <path id="Path 1" class="shipe" d="M34.02 68C52.8 68 68.03 52.77 68.03 33.98C68.03 15.2 52.8 -0.03 34.02 -0.03C15.23 -0.03 0 15.2 0 33.98C0 52.77 15.23 68 34.02 68Z" />
+        <path id="Path 2" class="shp1" d="M25.81 28.22L29.33 28.22L29.33 24.81C29.33 23.3 29.36 20.97 30.46 19.54C31.61 18.01 33.2 16.97 35.92 16.97C40.35 16.97 42.22 17.61 42.22 17.61L41.34 22.82C41.34 22.82 39.88 22.39 38.51 22.39C37.14 22.39 35.92 22.88 35.92 24.25L35.92 28.22L41.53 28.22L41.14 33.31L35.92 33.31L35.92 50.99L29.33 50.99L29.33 33.31L25.81 33.31L25.81 28.22Z" />
+      </g>
+    </symbol>
+
+    <symbol id="pinterest" viewBox="0 0 68 68" width="68" height="68">
+      <defs>
+        <clipPath clipPathUnits="userSpaceOnUse" id="cp3">
+          <path d="M0 0L68 0L68 68L0 68Z" />
+        </clipPath>
+      </defs>
+      <style>
+        tspan {
+          white-space: pre
+        }
+
+        .shp {
+          fill: #ff5c58
+        }
+
+        .shp1 {
+          fill: #ffffff
+        }
+
+      </style>
+      <g id="Page 1" clip-path="url(#cp1)">
+        <path id="Path 1" class="shp" d="M34.02 68C52.8 68 68.03 52.77 68.03 33.98C68.03 15.2 52.8 -0.03 34.02 -0.03C15.23 -0.03 0 15.2 0 33.98C0 52.77 15.23 68 34.02 68Z" />
+        <path id="Path 2" class="shp1" d="M34.02 16.89C24.63 16.89 17.01 24.5 17.01 33.89C17.01 40.86 21.2 46.84 27.19 49.47C27.14 48.28 27.18 46.86 27.49 45.57C27.81 44.19 29.67 36.3 29.67 36.3C29.67 36.3 29.13 35.21 29.13 33.61C29.13 31.09 30.59 29.2 32.41 29.2C33.96 29.2 34.71 30.37 34.71 31.76C34.71 33.31 33.71 35.64 33.2 37.79C32.78 39.6 34.11 41.07 35.89 41.07C39.11 41.07 41.28 36.93 41.28 32.03C41.28 28.3 38.77 25.51 34.2 25.51C29.05 25.51 25.83 29.36 25.83 33.65C25.83 35.14 26.27 36.18 26.95 36.99C27.27 37.36 27.31 37.51 27.2 37.94C27.12 38.25 26.93 39.01 26.85 39.3C26.74 39.73 26.39 39.89 26 39.73C23.62 38.76 22.52 36.16 22.52 33.23C22.52 28.4 26.59 22.61 34.67 22.61C41.16 22.61 45.44 27.31 45.44 32.35C45.44 39.02 41.73 44.01 36.26 44.01C34.43 44.01 32.7 43.01 32.11 41.89C32.11 41.89 31.12 45.8 30.91 46.56C30.55 47.87 29.84 49.18 29.2 50.2C30.73 50.66 32.34 50.9 34.02 50.9C43.41 50.9 51.02 43.29 51.02 33.89C51.02 24.5 43.41 16.89 34.02 16.89Z" />
+      </g>
+
+    </symbol>
+
+
+  </svg>
+
+  <!--svg-sprites-->
+
+
+  <div class="progress-line">
+    <div class="progress-line__item"></div>
+  </div>
+  <header class="header">
+    <div class="container">
+
+      <nav class="header__nav">
+        <button class="header__nav-btn" type="button">
+          <svg class="ham3" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path class="line top" d="m 70,33 h -40 c -11.092231,0 11.883874,13.496726 -3.420361,12.956839 -0.962502,-2.089471 -2.222071,-3.282996 -4.545687,-3.282996 -2.323616,0 -5.113897,2.622752 -5.113897,7.071068 0,4.448316 2.080609,7.007933 5.555839,7.007933 2.401943,0 2.96769,-1.283974 4.166879,-3.282995 2.209342,0.273823 4.031294,1.642466 5.857227,-0.252538 v -13.005715 16.288404 h 7.653568" />
+            <path class="line middle" d="m 70,50 h -40 c -5.6862,0 -8.534259,5.373483 -8.534259,11.551069 0,7.187738 3.499166,10.922274 13.131984,10.922274 11.021777,0 7.022787,-15.773343 15.531095,-15.773343 3.268142,0 5.177031,-2.159429 5.177031,-6.7 0,-4.540571 -1.766442,-7.33533 -5.087851,-7.326157 -3.321409,0.0092 -5.771288,2.789632 -5.771288,7.326157 0,4.536525 2.478983,6.805271 5.771288,6.7" />
+            <path class="line bottom" d="m 70,67 h -40 c 0,0 -3.680675,0.737051 -3.660714,-3.517857 0.02541,-5.415597 3.391687,-10.357143 10.982142,-10.357143 4.048418,0 17.88928,0.178572 23.482143,0.178572 0,2.563604 2.451177,3.403635 4.642857,3.392857 2.19168,-0.01078 4.373905,-1.369814 4.375,-3.392857 0.0011,-2.023043 -1.924401,-2.589191 -4.553571,-4.107143 -2.62917,-1.517952 -4.196429,-1.799562 -4.196429,-3.660714 0,-1.861153 2.442181,-3.118811 4.196429,-3.035715 1.754248,0.0831 4.375,0.890841 4.375,3.125 2.628634,0 6.160714,0.267857 6.160714,0.267857 l -0.178571,-2.946428 10.178571,0 -10.178571,0 v 6.696428 l 8.928571,0 -8.928571,0 v 7.142858 l 10.178571,0 -10.178571,0" />
+          </svg>
+        </button>
+
+
+        <span class="nav__line"></span>
+
+
+        <ul class="header__list">
+          <a class="header__link" href="#">about us</a>
+          <a class="header__link" href="#">work</a>
+        </ul>
+
+        <div class="header__logo">
+          <svg class="header__link" xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 94 85" width="74" height="85">
+            <defs>
+              <image class="header__logo-img" width="74" height="85" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAABVCAMAAAD3y6OfAAAAAXNSR0IB2cksfwAAAmFQTFRFZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeZMKeWtasEQAAAMt0Uk5TAAZUo97589eqW1Xk/wOMkON4LAkr4pZcpQtdCukBZQhkI7ZtLc0i7Rwu9w0vzBEhxMN2zwLOMBb2e3oVIH3+tcJIBb0EMQ+69NaG+x+E1dwyJh4zNB01NjfLOBspmDmfGspQqJKNOscZuROFFH+vWnCB7Ax+h7Ne8HIX7vqkc9Jh5VYHyd3hl2ps2/2C2lcY/GDoeSRK60n1Ru+pvzxBJXw+srDIRCqgO7dmcaE/gK3BQJwOiELGQ0XFEkdigxBMdY9Pp56Ujk6dUkvFUuafAAAFBElEQVR4nLXY+0MURRwA8C/P4PxCERgSIvhYPYWDC3nVnacgoggWbzk16ULCECWlh2AUBhYmGpaEVlAUkFFSWAIHQdm7/qpmucPb42Zmd/bW7y+3M/Odz8695uZ7AJojJDQsPCLykajoEO1ztIdpDXpjjclwPCYWFREbYzD/KEEfi3s8Pj4hbi25fMJYPZGQ65I810nrSONJI/Xk9YhhKSutlDDE9fEG8hsQ1yq8VPL6bBAT0jZyBjchbla2NyNu4qRvTAvo2iJtZedvQzQr22bEbRxd2h7YuZ3tJyPu8O/ZgZjMyt5K03l+OmKkf08kYrqYDpBhYflEy1S2MwPup9AzGCOQIWXRB6yI0cp2NOJTwjrbz0bcmeNr5uQiZlMTs3g6QJ6F6ucXID7taz6DWGCj63k8nfiSnda9C9HxYL3ZDsRdunSWH7Ob7DN7CosAigr3kMu9xfp0gH1Uv2S/vBEfKC09ID/uL6Gk2KV96jrLLz5YtrLblx2krV2jLvvltO6sQ8/K+HOx1Hdfsw5QQffJ1ymhkrEXlGvXOT4ryqUKkfQKqUpIzxXSAapFfMG1L/u5mv0qqVpUF1i/Lh2gRqp9iDrxczX4unVN66+VavTqsm/mJ9TmBqED1PH9oNa+7Fs4vlmqC04HOMz2DdAB6lm+2WKATnwn1TdbDosozFMXHHEepen1Ivqx59ljxwN9s1NIh4aIFzi+a5V/1HmElvdi1HI0nkhb9XpWRWAT5+YvNRcpmyedx6lpcb7y62W/Z0dqp8gWju8/lsw4cSh4dJx6UM5Aq3y+OM3htQXhz5hMprZXoiL86ruz8v3OtatNz3o1VI1/zXNV+zoB3/B2t5Py4zxih4reeSH8TfrRNYCHlC5S33lrybcQ3+5GvKhSzr8T0dPUq5GHnkuI3ctXIRfJ+b3oXcQ0Pl/pOHPuPa089JE3YvkiDTG8GC4jvs8v5puu7O1P0szbES/JjzlXEfsA4kltfI03+YOB69y7r+KLvQWfCfFDuSj+iNQgKayZJKrxBhH6tPKpXl5CvGAhUUo+S4OcyfEfd3UO3byslU/wvDi3lH+lMCoyTwx9QsrlnZx/E/x4UpB9Sh4+U/I4zPPTRz43f8F5+5V8Cfk4mshuTuqw0WpPNCDu5vFqoeB7vkQsJSv5SrE5lJehg75b5ftVgkOdanz1GOLAOMCEA8t8xfjXiI1U3XVb2Rx15bP4byYnJzuaXKR4xG9Jz3eIXb7xY1dw4EbgNJvrjn/HqJPqKzfkgkS5Z+q8Y4si4Xv8IbCutrmmV3fR1+/jb971nq9/9PumTtwOnGTrDdBln1KXT//kibjBVMrN6WHrHaF136H54mEbo+oG+bbme6yh6d6gfY4OMBKsb5uZ5Q2PjAXlq+gA95qD8FtnxtVSZvX7rTNz6kmzMzr9VrcGHWB8plWP3qJN1+m3uG9pTZ1zC/sCuuzzTr+UmBfRyc+1mC+oC/rz7gUxXfbnH6IOsKDVz9Sja/Z16rKfqZ6UaS2kdYdOtB/qhqSzP0PNoq2dvkkXqvtLbqoOv7SdqPh14X5dx2+/10/9MUGfrOqzdBhuawD76QY4uZjYFfZnI+P3UcVfsg4xRobJ6uMW/qrr+BvmTv1jv8tIK3Qv6dHBnte+eB2Sp0gB8W9M5f1KVt4Q2y9xM3XtwfQN0WWf9uc+lFh5lYlADNJ8w3TiWwP9fsN0gP/6V67+B4O2LyGEzZW+AAAAAElFTkSuQmCC" />
+            </defs>
+            <style>
+              tspan {
+                white-space: pre
+              }
+
+            </style>
+            <g id="MENU">
+              <use id="Logo" href="#img1" x="0" y="0" />
+            </g>
+          </svg>
+        </div>
+
+        <ul class="header__list">
+          <a class="header__link" href="#">shop</a>
+          <a class="header__link" href="#">contact</a>
+        </ul>
+
+        <div class="mobile__wrapper--open mobile__wrapper--open-active">
+          <img class="mobile-logo" src="image/logo-bike.svg" alt="logo-bike">
+          
+            <ul class="header__list-items">
+
+            <li class="header__link-item">
+             <a class="header__link header__link--active" href="#">about us</a>
+            </li>
+            
+            <li class="header__link-item" data-menuanchor="work">
+              <a class="header__link" href="#work">work</a>
+            </li>
+            
+            <li class="header__link-item"data-menuanchor="contacts" >
+              <a class="header__link" href="#shop">shop</a>
+            </li>
+            
+            <li class="header__link-item" data-menuanchor="contacts">
+              <a class="header__link" href="#contacts">contact</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </nav>
+
+    </div>
+
+
+
+  </header>
+
+
+  <section class="bike-description">
+    <div class="container">
+      <img class="bike-description__icon" src="image/icon-title.svg" alt="icon">
+      <h1 class="bike-description__title"> A new generation of vintage bike</h1>
+      <div class="bike-description__text">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="gallery__wrapper" data-aos="fade" data-aos-delay="50" data-aos-duration="1000" >
+      <div class="gallery__block-left">
+        <div class="gallery__block-image">
+          <img class="gallery__image-logo" src="image/bike.svg" alt="bike.logo">
+        </div>
+      </div>
+      <div class="gallery__block-right">
+        <div class="gallery__block-item">
+          <img class="gallery__description-icon" src="image/gallery.svg" alt="logo-gallery">
+          <h1 class="gallery__description-title">vintage oliva</h1>
+          <div class="gallery__description-text">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
+          </div>
+        </div>
+
+        <div class="gallery__block-image">
+          <img class="gallery__image" src="image/img-2.jpg" alt="image-2">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="gallery-2">
+    <div id="work" class="gallery__wrapper" data-aos="fade-right" data-aos-delay="100"   data-aos-duration="1000">
+
+      <div class="gallery__block-right">
+        <div class="gallery__block-item">
+          <img class="gallery__description-icon" src="image/boriosa.svg" alt="logo-boriosa">
+          <h1 class="gallery__description-title">la boriosa</h1>
+          <div class="gallery__description-text">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
+          </div>
+        </div>
+
+        <div class="gallery__block-image">
+          <img class="gallery__image" src="image/img-3.jpg" alt="image-3">
+
+        </div>
+
+      </div>
+      <div class="gallery__block-left">
+        <div class="gallery__block-image gallery-block">
+
+          <img class="gallery__image-logo" src="image/vintage.svg" alt="bike.logo">
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="gallery-3">
+
+    <div class="gallery__wrapper" data-aos="fade-up" data-aos-delay="150"   data-aos-duration="1000" >
+      <div class="gallery__block-left gallery-item-1">
+        <div class="gallery-block-3">
+          <img class="gallery__image-logo" src="image/chassis.svg" alt="chassis.logo">
+        </div>
+      </div>
+      <div class="gallery__block-center">
+        <div class="gallery__block-item">
+          <img class="gallery__description-icon icon-bottom" src="image/bottle.svg" alt="logo-bottle">
+          <h1 class="gallery__description-title gallery-title">retro bike - m.hulot</h1>
+          <div class="gallery__description-text">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
+          </div>
+
+        </div>
+        <div class="gallery__block-image">
+          <img class="gallery__image" src="image/image-6.jpg" alt="image-3">
+
+        </div>
+      </div>
+      <div class="gallery__block-right gallery-item-3">
+        <div class="gallery__block-image--bike"></div>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="bike-description bike-description-slider">
+    <div class="container">
+      <div class="swiper-container">
+        <div class="container-promo swiper-wrapper">
+
+
+          <section class="swiper-slide promo bike">
+            <img class="bike-description__icon slider-icon" src="image/twitter.svg" alt="twitter-icon">
+            <h1 class="bike-description__title slider-title">AOD New York @aod <span>/ 35 min</span></h1>
+            <div class="bike-description__text slider-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante valery.</p>
+            </div>
+          </section>
+          <section class="swiper-slide promo bike">
+            <img class="bike-description__icon slider-icon" src="image/twitter.svg" alt="twitter-icon">
+            <h1 class="bike-description__title slider-title">AOD New York @aod <span>/ 35 min</span></h1>
+            <div class="bike-description__text slider-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante leonid.</p>
+            </div>
+          </section>
+          <section class="swiper-slide promo bike">
+            <img class="bike-description__icon slider-icon" src="image/twitter.svg" alt="twitter-icon">
+            <h1 class="bike-description__title slider-title">AOD New York @aod <span>/ 35 min</span></h1>
+            <div class="bike-description__text slider-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante alex.</p>
+            </div>
+          </section>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="gallery-4">
+
+    <div id="shop" class="gallery__wrapper">
+
+      <div class="gallery__column-1">
+        <div class="gallery-items-1">
+          <div class="gallery-item-wrapper">
+
+            <a data-fancybox="images" href="image/img-8.png"> <img class="gallery-item__image" src="image/img-8.png" alt="pad-img"></a>
+
+            <div class="gallery-item-wrapper__content" id="test">
+              <div class="gallery-item-wrapper__icon">
+                <img src="image/logo-bike.svg" alt="logo-bike">
+              </div>
+              <div class="gallery-item-wrapper__title">shop now</div>
+            </div>
+          </div>
+          <div class="gallery-item-wrapper">
+            <a data-fancybox="images" href="image/img-9.png"> <img class="gallery-item__image" src="image/img-9.png" alt="pad-img"></a>
+            <div class="gallery-item-wrapper__content" id="test-1">
+              <div class="gallery-item-wrapper__icon">
+                <img src="image/logo-bike.svg" alt="logo-bike">
+              </div>
+              <div class="gallery-item-wrapper__title">shop now</div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item-wrapper">
+          <a data-fancybox="images" href="image/img-10.png"> <img class="gallery-item__image" src="image/img-10.png" alt="pad-img"></a>
+          <div class="gallery-item-wrapper__content" id="test-2">
+            <div class="gallery-item-wrapper__icon">
+              <img src="image/logo-bike.svg" alt="logo-bike">
+            </div>
+            <div class="gallery-item-wrapper__title">shop now</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__column-2">
+        <div class="gallery-items-2">
+          <div class="gallery-item-wrapper">
+            <a data-fancybox="images" href="image/img-11.png"> <img class="gallery-item__image" src="image/img-11.png" alt="pad-img"></a>
+            <div class="gallery-item-wrapper__content" id="test-3">
+              <div class="gallery-item-wrapper__icon">
+                <img src="image/logo-bike.svg" alt="logo-bike">
+              </div>
+              <div class="gallery-item-wrapper__title">shop now</div>
+            </div>
+          </div>
+          <div class="gallery-item-wrapper">
+            <a data-fancybox="images" href="image/img-12.png"> <img class="gallery-item__image" src="image/img-12.png" alt="pad-img"></a>
+            <div class="gallery-item-wrapper__content" id="test-4">
+              <div class="gallery-item-wrapper__icon">
+                <img src="image/logo-bike.svg" alt="logo-bike">
+              </div>
+              <div class="gallery-item-wrapper__title">shop now</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__column-3">
+
+        <div class="gallery-item-wrapper">
+          <a data-fancybox="images" href="image/img-13.png"> <img class="gallery-item__image" src="image/img-13.png" alt="pad-img"></a>
+          <div class="gallery-item-wrapper__content" id="test-5">
+            <div class="gallery-item-wrapper__icon">
+              <img src="image/logo-bike.svg" alt="logo-bike">
+            </div>
+            <div class="gallery-item-wrapper__title">shop now</div>
+          </div>
+        </div>
+
+
+        <div class="gallery-items-3">
+
+          <div class="gallery-item-wrapper">
+            <a data-fancybox="images" href="image/img-14.png"> <img class="gallery-item__image" src="image/img-14.png" alt="pad-img"></a>
+
+            <div class="gallery-item-wrapper__content" id="test-6">
+              <div class="gallery-item-wrapper__icon">
+                <img src="image/logo-bike.svg" alt="logo-bike">
+              </div>
+              <div class="gallery-item-wrapper__title">shop now</div>
+            </div>
+          </div>
+          <div class="gallery-item-wrapper">
+            <a data-fancybox="images" href="image/img-15.png"> <img class="gallery-item__image" src="image/img-15.png" alt="pad-img"></a>
+            <div class="gallery-item-wrapper__content" id="test-7">
+              <div class="gallery-item-wrapper__icon">
+                <img src="image/logo-bike.svg" alt="logo-bike">
+              </div>
+              <div class="gallery-item-wrapper__title">shop now</div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="button-block">
+      <button class="button-block__shopping">discover the shop</button>
+    </div>
+  </section>
+
+  <section class="form">
+    <div id="contacts" class="form__wrapper">
+      <div class="form__logo header__logo">
+
+        <svg class="header__link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 85" width="94" height="85">
+          <defs>
+            <image width="94" height="85" id="img1" href="data:image/png;base64,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" />
+          </defs>
+          <style>
+            tspan {
+              white-space: pre
+            }
+
+          </style>
+          <g id="MENU">
+            <use id="Logo" href="#img1" x="15" y="0" />
+          </g>
+        </svg>
+      </div>
+      <h2 class="form__title">Stay on the saddle!</h2>
+      <form class="form__footer">
+        <input class="form__footer-input" type="text" placeholder="enter your email...">
+        <button class="form__footer-btn" type="submit">go</button>
+      </form>
+    </div>
+
+
+  </section>
+
+  <section class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+
+        <div class="footer__contacts">
+          <h2 class="footer__contacts-title">AOD New York</h2>
+          <div class="footer__contacts-address">2250 Lexington Avenue<br> New York, NY 10035 - info@domain.com</div>
+        </div>
+        <div class="footer__social">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <svg class="footer__socials-icon" width="68" height="68">
+                  <use href="#twitter"></use>
+                </svg>
+
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <svg class="footer__socials-icon" width="68" height="68">
+                  <use href="#facebook"></use>
+                </svg>
+
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <svg class="footer__socials-icon" width="68" height="68">
+                  <use href="#pinterest"></use>
+                </svg>
+
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__author">
+          <div class="footer__text">Handcrafted by</div>
+          <div class="footer__logo">
+            <img src="image/footer-logo.png" alt="logo-footer">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

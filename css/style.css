@@ -1,0 +1,643 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.header {
+  background-image: url(../image/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header__nav {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 40px;
+  position: relative;
+
+}
+
+.nav__line {
+  position: absolute;
+  left: 340px;
+  bottom: 0;
+  width: 20px;
+  height: 1px;
+  background-color: #000;
+  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header__nav-btn {
+  display: none;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+
+}
+
+.header__logo {
+  padding: 0 80px;
+}
+
+.header__link {
+  position: relative;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #4d4959;
+  text-transform: uppercase;
+  transition: color .3s linear;
+}
+
+.header__link:hover {
+  color: #64c29e;
+  transition: color .3s linear;
+}
+
+.header__link:not(:last-child) {
+  margin-right: 80px;
+}
+
+.header__link:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  right: -40px;
+  top: 7px;
+  width: 4px;
+  height: 4px;
+  background-color: #84828e;
+  pointer-events: none;
+
+}
+
+.bike-description {
+  padding: 120px 0px 138px 0px;
+  background-color: #f7f7f7;
+}
+
+.bike-description-slider {
+  padding: 124px 0px 170px;
+  background-color: #f7f7f7;
+}
+
+.bike-description__icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+}
+
+.bike-description__title {
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: #353738;
+  font-weight: 700;
+  font-family: "Lato";
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.slider-title {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #353738;
+  font-weight: 700;
+  font-family: "Lato";
+  text-align: center;
+  margin-bottom: 28px;
+  text-transform: none;
+}
+
+.slider-title span {
+
+  font-size: 18px;
+  letter-spacing: 6px;
+  color: #848789;
+  font-weight: 300;
+  font-family: "Lato";
+  text-align: center;
+}
+
+.bike-description__text {
+  font-size: 18px;
+  line-height: 30px;
+  color: #848789;
+  font-weight: 400;
+  font-family: "Lato";
+  text-align: center;
+}
+
+.slider-text {
+  font-size: 24px;
+  line-height: 34px;
+  color: #848789;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Lato";
+  text-align: center;
+}
+
+
+
+.gallery__wrapper {
+  display: flex;
+}
+
+.gallery__block-left {
+  display: flex;
+  flex-shrink: 0;
+  width: 66.5%;
+}
+
+.gallery__block-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../image/img-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+}
+
+.gallery__block-image--bike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../image/image-7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+}
+
+.gallery-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../image/img-4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+}
+
+.gallery-block-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../image/img-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+}
+
+.gallery__image-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 99.6%;
+  object-fit: cover;
+}
+
+.gallery__block-item {
+  padding: 35px 40px 87px 40px;
+  position: relative;
+
+}
+
+.gallery__block-item::after {
+  position: absolute;
+  content: "";
+  left: 48%;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #fff transparent transparent transparent
+}
+
+.gallery__description-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.icon-bottom {
+  margin-bottom: 25px;
+}
+
+.gallery__description-title {
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: #353738;
+  font-weight: 700;
+  font-family: "Lato";
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.gallery-title {
+  margin-bottom: 25px;
+}
+
+.gallery__description-text {
+  font-size: 18px;
+  line-height: 34px;
+  color: #848789;
+  font-weight: 400;
+  font-family: "Lato";
+  text-align: left;
+}
+
+.gallery__description-text::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  position: absolute;
+  left: 45%;
+  bottom: 50px;
+  background-color: rgba(53, 55, 56, 0.2);
+}
+
+.gallery-item-1,
+.gallery-item-3 {
+  display: flex;
+  flex-shrink: 0;
+  width: 33.3%;
+}
+
+.gallery__column-1,
+.gallery__column-2,
+.gallery__column-3 {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+}
+
+.gallery-items-1,
+.gallery-items-2,
+.gallery-items-3 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.gallery-item-wrapper {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+.gallery-item-wrapper__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(100, 194, 158, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+
+.gallery-item-wrapper__content:hover {
+  opacity: 1;
+  transition: opacity .3s linear;
+}
+
+.gallery-item-wrapper__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  background-image: url("../image/logo-bike.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+}
+
+.gallery-item-wrapper__title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  word-spacing: 5px;
+  text-transform: uppercase;
+}
+
+
+
+.button-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 75px 0;
+  background-color: #282f35;
+}
+
+.button-block__shopping {
+  padding: 17px 54px 17px 54px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Lato";
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color .5s, background .3s linear;
+}
+
+.button-block__shopping:hover {
+  background-color: #fff;
+  color: #000;
+  transition: color .5s, background .3s linear;
+}
+
+.form {
+  padding: 105px 0 110px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px 0px 15px;
+}
+
+.form__logo {
+  margin-bottom: 35px;
+}
+
+.form__title {
+  font-size: 24px;
+  line-height: 34px;
+  color: #848789;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Lato";
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form__footer {
+  display: flex;
+  align-items: center;
+}
+
+.form__footer-input {
+  display: block;
+  width: 400px;
+  height: 69px;
+  background-color: #ffffff;
+  border: 1px solid #d3d7d9;
+  outline-color: #64c29e;
+  padding: 0 28px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #929292;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Lato", sans-serif;
+  margin-right: 8px;
+}
+
+.form__footer-btn {
+  color: #fff;
+  background-color: #64c29e;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  padding: 26px 46px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow .4s linear, background-color .4s linear;
+
+}
+
+.form__footer-btn:hover {
+  background-color: #0e9f67;
+  box-shadow: 0px 2px 15px rgb(165, 214, 167);
+  transition: background .4s linear;
+}
+
+.footer {
+  padding: 95px 0 100px 0;
+  background-color: #f7f7f7;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer__contacts {
+  width: 264px;
+  height: 56px;
+
+}
+
+.footer__contacts-title {
+  font-size: 16px;
+  line-height: 18px;
+  color: #848789;
+  font-weight: 700;
+  font-family: "Lato";
+  margin-bottom: 3px;
+}
+
+.footer__contacts-address {
+  font-size: 14px;
+  line-height: 18px;
+  color: #848789;
+  font-weight: 400;
+  font-family: "Lato";
+}
+
+.footer__social-list {
+  display: flex;
+}
+
+.footer__social-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.footer__social-link {
+  text-decoration: none;
+}
+
+
+
+.footer__socials-icon {
+  transition: opacity .4s linear, fill .4s linear;
+}
+
+.footer__socials-icon:hover {
+  fill: rgb(165, 214, 167);
+  opacity: 0.4;
+  transition: opacity .4s linear;
+}
+
+
+.footer__author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__text {
+  font-size: 14px;
+  line-height: 18px;
+  color: #848789;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Lato";
+  margin-right: 12px;
+}
+
+.progress-line {
+  width: 100%;
+  height: 5px;
+  background-color: #f5f5f5;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10001;
+}
+
+.progress-line__item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: crimson;
+  transition: width 0.3s linear;
+}
+
+
+/*HUMBURGER*/
+
+.ham {
+  display: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #64c29e;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+
+.ham3 .top {
+  stroke-dasharray: 40 130;
+}
+.ham3 .middle {
+  stroke-dasharray: 40 140;
+}
+.ham3 .bottom {
+  stroke-dasharray: 40 205;
+}
+.ham3.active .top {
+  stroke-dasharray: 75 130;
+  stroke-dashoffset: -63px;
+}
+.ham3.active .middle {
+  stroke-dashoffset: -102px;
+}
+.ham3.active .bottom {
+  stroke-dasharray: 110 205;
+  stroke-dashoffset: -86px;
+}
+
+/*MODAL-WINDOW*/
+
+.header__list-items {
+  display: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+
