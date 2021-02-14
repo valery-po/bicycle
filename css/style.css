@@ -219,6 +219,10 @@ body {
   width: 100%;
 }
 
+.gallery-2 {
+  height: 611px;
+}
+
 .gallery-block-3 {
   display: flex;
   justify-content: center;
