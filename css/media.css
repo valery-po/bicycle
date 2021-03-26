@@ -32,6 +32,12 @@
   .header {
     height: 70vh;
   }
+  
+  .gallery__image {
+  width: 100%;
+  height: 312px;
+  object-fit: cover;
+}
 
   .gallery__wrapper {
     flex-wrap: wrap;
